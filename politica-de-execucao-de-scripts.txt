@@ -1,0 +1,22 @@
+Passo 4: Permitindo política de execução de scripts (apenas Windows)
+Caso você utiliza o Windows, é necessário que você siga os seguintes passos para conseguir executar o JSON Server:
+
+Abra o PowerShell como administrador. Para fazer isso, pesquise "PowerShell" no menu Iniciar, clique com o botão direito do mouse sobre "Windows PowerShell" (ou "Windows Terminal") e selecione "Executar como administrador".
+
+No PowerShell, você pode verificar a política de execução atual com o seguinte comando:
+
+Get-ExecutionPolicy
+COPIAR CÓDIGO
+A política de execução pode ser "Restricted" (Restrita), que é a configuração padrão que impede a execução de scripts.
+
+Execute o seguinte comando para permitir a execução de scripts no seu computador:
+
+Set-ExecutionPolicy RemoteSigned
+COPIAR CÓDIGO
+O PowerShell pode solicitar confirmação para realizar a operação. Pressione "S" (Sim) ou "Y" (Yes) dependendo da linguagem do seu terminal e pressione Enter para confirmar.
+
+Ao finalizar o curso, é uma boa prática reverter a política de execução de scripts para o valor original para garantir a segurança do sistema. Você pode fazer isso definindo a política de execução de volta para "Restricted" com o seguinte comando:
+
+Set-ExecutionPolicy Restricted
+COPIAR CÓDIGO
+Mas caso você queira utilizar o JSON Server novamente, será necessário alterar a política de execução para "RemoteSigned" mais uma vez.
